@@ -1,0 +1,204 @@
+{
+  "slug": "geometry",
+  "title": "Geometry",
+  "order": 9,
+  "icon": "📐",
+  "blurb": "Master lines, angles, triangles, circles, polygons, and 3D solids for GRE Quant.",
+  "theory": "<h3>Lines &amp; Angles</h3><p>A straight line measures 180°. Angles around a point sum to 360°. Two angles are <strong>complementary</strong> if they add to 90° and <strong>supplementary</strong> if they add to 180°. When two lines cross, the opposite (<strong>vertical</strong>) angles are equal, and each pair of adjacent angles is supplementary.</p><p>When a <strong>transversal</strong> cuts two <strong>parallel</strong> lines, it creates eight angles in two matching groups of four. <em>Corresponding</em> angles are equal, <em>alternate interior</em> angles are equal, <em>alternate exterior</em> angles are equal, and <em>co-interior</em> (same-side interior) angles are supplementary. A useful shortcut: every angle is either equal to a given angle or supplementary to it.</p><h3>Triangles</h3><p>The three interior angles of any triangle sum to <strong>180°</strong>. An <em>exterior</em> angle equals the sum of the two remote interior angles. Triangle types by sides: <strong>scalene</strong> (no equal sides), <strong>isosceles</strong> (two equal sides, and the angles opposite them are equal), and <strong>equilateral</strong> (all sides equal, all angles 60°). By angle: acute, right, or obtuse.</p><p>Area = (1/2) × base × height, where the height is perpendicular to the chosen base. For an equilateral triangle with side s, Area = (√3 ÷ 4) × s<sup>2</sup>.</p><h3>Triangle Inequality</h3><p>Any side must be <strong>less than</strong> the sum and <strong>greater than</strong> the difference of the other two. If two sides are a and b, the third side x satisfies |a − b| &lt; x &lt; a + b. Example: with sides 5 and 9, the third side ranges 4 &lt; x &lt; 14.</p><h3>Pythagorean Theorem &amp; Triples</h3><p>In a right triangle, a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>, where c is the hypotenuse (the side opposite the right angle, always the longest). Memorize the common <strong>triples</strong> and their multiples: 3-4-5 (and 6-8-10, 9-12-15), 5-12-13, 8-15-17, and 7-24-25. Recognizing these saves time.</p><h3>Special Right Triangles</h3><p>These two ratios appear constantly:</p><table><tr><th>Triangle</th><th>Angles</th><th>Side ratio (short : long : hyp)</th></tr><tr><td>Isosceles right</td><td>45°-45°-90°</td><td>1 : 1 : √2</td></tr><tr><td>Half equilateral</td><td>30°-60°-90°</td><td>1 : √3 : 2</td></tr></table><p>In a 45-45-90, hypotenuse = leg × √2. In a 30-60-90, the side opposite 30° is the shortest; the side opposite 60° is (short × √3); the hypotenuse is twice the short side.</p><h3>Polygons &amp; Interior Angles</h3><p>For a polygon with n sides, the interior angles sum to <strong>(n − 2) × 180°</strong>. A regular (all sides and angles equal) polygon has each interior angle equal to (n − 2) × 180° ÷ n. Triangle = 180°, quadrilateral = 360°, pentagon = 540°, hexagon = 720°, octagon = 1080°. The exterior angles of any convex polygon always sum to 360°.</p><h3>Quadrilaterals</h3><ul><li><strong>Square:</strong> 4 equal sides, 4 right angles. Area = s<sup>2</sup>, perimeter = 4s, diagonal = s√2.</li><li><strong>Rectangle:</strong> opposite sides equal, 4 right angles. Area = length × width, diagonal = √(l<sup>2</sup> + w<sup>2</sup>).</li><li><strong>Parallelogram:</strong> opposite sides parallel and equal; opposite angles equal; consecutive angles supplementary. Area = base × height (perpendicular height, not the slanted side).</li><li><strong>Trapezoid:</strong> exactly one pair of parallel sides (the bases). Area = (1/2) × (b1 + b2) × h, the average of the two bases times the height.</li></ul><h3>Circles</h3><p>The <strong>radius</strong> r runs from center to edge; the <strong>diameter</strong> d = 2r crosses through the center. <strong>Circumference</strong> = 2πr = πd. <strong>Area</strong> = πr<sup>2</sup>. A <strong>chord</strong> connects two points on the circle; the diameter is the longest chord.</p><p>An <strong>arc</strong> is a portion of the circumference; a <strong>sector</strong> is a pie-slice region. For a central angle of θ degrees: arc length = (θ ÷ 360) × 2πr, and sector area = (θ ÷ 360) × πr<sup>2</sup>. An <strong>inscribed angle</strong> (vertex on the circle) is half the central angle subtending the same arc. Any angle inscribed in a semicircle is a right angle (90°).</p><h3>Perimeter &amp; Area Recap</h3><p>Perimeter is the total distance around a 2D shape; area is the space inside, measured in square units. Combine basic shapes for composite figures, and subtract to find shaded regions.</p><h3>3D Solids</h3><ul><li><strong>Rectangular box:</strong> Volume = l × w × h. Surface area = 2(lw + lh + wh). Space diagonal = √(l<sup>2</sup> + w<sup>2</sup> + h<sup>2</sup>).</li><li><strong>Cube</strong> (side s): Volume = s<sup>3</sup>, surface area = 6s<sup>2</sup>, space diagonal = s√3.</li><li><strong>Cylinder</strong> (radius r, height h): Volume = πr<sup>2</sup>h. Surface area = 2πr<sup>2</sup> + 2πrh (two circular ends plus the wrapped rectangle).</li></ul><h3>Similar Figures &amp; Scale</h3><p>Similar figures have equal angles and proportional sides. If the linear scale factor (ratio of corresponding lengths) is k, then perimeters scale by <strong>k</strong>, areas scale by <strong>k<sup>2</sup></strong>, and volumes scale by <strong>k<sup>3</sup></strong>. For example, doubling every dimension multiplies area by 4 and volume by 8.</p>",
+  "whatEtsTests": "<ul><li>Setting up and solving with parallel-line angle relationships (corresponding, alternate, co-interior) and vertical angles.</li><li>Recognizing the 45-45-90 and 30-60-90 ratios and the common Pythagorean triples to avoid heavy computation.</li><li>Applying the triangle inequality, especially in 'how many integer values' or 'which could be a side' questions.</li><li>Circle relationships: linking radius, circumference, and area, and computing arc length and sector area from a central angle.</li><li>Area/perimeter of composite and shaded figures by adding or subtracting basic shapes.</li><li>Volume and surface area of boxes, cubes, and cylinders, often with unit changes or a scale factor.</li><li>Scale factor effects: linear k, area k², volume k³ — a frequent quant-comparison theme.</li><li>The caution that figures may NOT be drawn to scale, so conclusions must come from given data, not appearance.</li></ul>",
+  "tips": [
+    "Spot triples instantly: if you see legs 3-4, 5-12, 8-15, or 7-24 (or multiples), the hypotenuse is 5, 13, 17, or 25 — no need for the formula.",
+    "Keep π symbolic until the end; most answers stay as multiples of π (like 16π), so don't approximate too early.",
+    "For sectors and arcs, find the fraction θ÷360 first, then multiply by the full area or circumference.",
+    "In parallel-line diagrams, every angle is either equal to or supplementary to any other — pick whichever gives a clean equation.",
+    "For special right triangles, write the ratio (1:1:√2 or 1:√3:2) and scale it to match the one length you're given.",
+    "Scale factor shortcut: if lengths scale by k, area scales by k² and volume by k³ — square or cube the ratio directly."
+  ],
+  "traps": [
+    "Figures are NOT necessarily drawn to scale: never measure or assume an angle is 90° or sides are equal unless stated or marked.",
+    "Using a slanted side as the height: area of a triangle or parallelogram needs the PERPENDICULAR height, not the slant length.",
+    "Confusing radius and diameter in circle formulas — circumference uses 2πr or πd, area uses πr², so a given diameter must be halved first.",
+    "Forgetting strict inequalities in the triangle inequality: the third side must be strictly between the difference and the sum, so boundary values are excluded.",
+    "Mixing up scale effects: doubling a dimension does NOT double the area or volume — area grows ×4 and volume ×8."
+  ],
+  "examples": [
+    {
+      "q": "<p>Two parallel lines are cut by a transversal. One of the angles formed measures 110°. What is the measure of its co-interior (same-side interior) angle?</p>",
+      "steps": "<p>1. Co-interior angles between parallel lines are supplementary (they add to 180°).</p><p>2. So the co-interior angle = 180° − 110° = <strong>70°</strong>.</p>",
+      "shortcut": "<p>Any angle in a parallel-line cut is either equal to 110° or supplementary (70°). The same-side interior pair must sum to 180°, giving 70°.</p>"
+    },
+    {
+      "q": "<p>A right triangle has one leg of length 6 and a hypotenuse of length 10. What is the length of the other leg?</p>",
+      "steps": "<p>1. Use a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>: 6<sup>2</sup> + b<sup>2</sup> = 10<sup>2</sup>.</p><p>2. 36 + b<sup>2</sup> = 100, so b<sup>2</sup> = 64.</p><p>3. b = <strong>8</strong>.</p>",
+      "shortcut": "<p>6-?-10 is a multiple of the 3-4-5 triple (scaled by 2): 6-8-10. The missing leg is 8 immediately.</p>"
+    },
+    {
+      "q": "<p>A circle has radius 6. A sector of this circle has a central angle of 60°. What is the area of the sector? Express in terms of π.</p>",
+      "steps": "<p>1. Full circle area = πr<sup>2</sup> = π(6)<sup>2</sup> = 36π.</p><p>2. The sector is 60° of 360°, a fraction of 60 ÷ 360 = 1/6.</p><p>3. Sector area = (1/6)(36π) = <strong>6π</strong>.</p>",
+      "shortcut": "<p>60° is one-sixth of the circle, so just take one-sixth of 36π = 6π.</p>"
+    },
+    {
+      "q": "<p>A cylinder has radius 3 and height 10. What is its volume in terms of π?</p>",
+      "steps": "<p>1. Volume of a cylinder = πr<sup>2</sup>h.</p><p>2. Substitute: π(3)<sup>2</sup>(10) = π(9)(10).</p><p>3. Volume = <strong>90π</strong>.</p>",
+      "shortcut": "<p>Area of the circular base is 9π; multiply by height 10 to get 90π.</p>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "geometry-e1",
+      "diff": "easy",
+      "type": "mc",
+      "q": "<p>Two angles are complementary. If one angle measures 35°, what is the measure of the other angle?</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": ["35°", "55°", "65°", "125°", "145°"],
+      "answer": 1,
+      "tol": 0,
+      "explain": "<p>Complementary angles sum to 90°. The other angle = 90° − 35° = 55°.</p>"
+    },
+    {
+      "id": "geometry-e2",
+      "diff": "easy",
+      "type": "mc",
+      "q": "<p>A triangle has two angles measuring 50° and 60°. What is the measure of the third angle?</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": ["50°", "60°", "70°", "80°", "110°"],
+      "answer": 2,
+      "tol": 0,
+      "explain": "<p>The interior angles of a triangle sum to 180°. Third angle = 180° − 50° − 60° = 70°.</p>"
+    },
+    {
+      "id": "geometry-e3",
+      "diff": "easy",
+      "type": "mc",
+      "q": "<p>A rectangle has length 8 and width 5. What is its perimeter?</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": ["13", "26", "40", "45", "80"],
+      "answer": 1,
+      "tol": 0,
+      "explain": "<p>Perimeter = 2(length + width) = 2(8 + 5) = 2(13) = 26.</p>"
+    },
+    {
+      "id": "geometry-e4",
+      "diff": "easy",
+      "type": "ne",
+      "q": "<p>A circle has a radius of 7. What is its diameter?</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": [],
+      "answer": 14,
+      "tol": 0,
+      "explain": "<p>The diameter is twice the radius: d = 2r = 2(7) = 14.</p>"
+    },
+    {
+      "id": "geometry-m1",
+      "diff": "medium",
+      "type": "mc",
+      "q": "<p>In a 30-60-90 right triangle, the hypotenuse has length 10. What is the length of the side opposite the 60° angle?</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": ["5", "5√2", "5√3", "10√3", "20"],
+      "answer": 2,
+      "tol": 0,
+      "explain": "<p>In a 30-60-90 triangle the sides are in ratio 1 : √3 : 2 (opposite 30° : 60° : 90°). The hypotenuse 10 corresponds to 2, so the scale is 5. The side opposite 60° = 5√3.</p>"
+    },
+    {
+      "id": "geometry-m2",
+      "diff": "medium",
+      "type": "ms",
+      "q": "<p>A triangle has two sides of length 6 and 10. Which of the following could be the length of the third side? Indicate all that apply.</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": ["3", "5", "8", "12", "15", "16", "20"],
+      "answer": [1, 2, 3, 4],
+      "tol": 0,
+      "explain": "<p>By the triangle inequality the third side x must satisfy 10 − 6 &lt; x &lt; 10 + 6, i.e. 4 &lt; x &lt; 16. The values strictly between 4 and 16 are 5, 8, 12, and 15. The values 3, 16, and 20 are excluded (16 fails the strict inequality).</p>"
+    },
+    {
+      "id": "geometry-m3",
+      "diff": "medium",
+      "type": "mc",
+      "q": "<p>What is the measure of each interior angle of a regular octagon (8 sides)?</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": ["108°", "120°", "135°", "144°", "1080°"],
+      "answer": 2,
+      "tol": 0,
+      "explain": "<p>Sum of interior angles = (n − 2) × 180° = (8 − 2) × 180° = 1080°. For a regular octagon each angle = 1080° ÷ 8 = 135°.</p>"
+    },
+    {
+      "id": "geometry-m4",
+      "diff": "medium",
+      "type": "qc",
+      "q": "<p>An equilateral triangle has side length 6. A square has side length 4.</p><p>Quantity A: the area of the triangle. Quantity B: the area of the square.</p>",
+      "info": "",
+      "qa": "Area of the equilateral triangle",
+      "qb": "Area of the square",
+      "choices": [],
+      "answer": 1,
+      "tol": 0,
+      "explain": "<p>Equilateral area = (√3 ÷ 4) × s<sup>2</sup> = (√3 ÷ 4) × 36 = 9√3 ≈ 15.59. Square area = 4<sup>2</sup> = 16. Since 16 &gt; 15.59, Quantity B is greater.</p>"
+    },
+    {
+      "id": "geometry-m5",
+      "diff": "medium",
+      "type": "ne",
+      "q": "<p>A trapezoid has parallel bases of length 6 and 10 and a height of 4. What is its area?</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": [],
+      "answer": 32,
+      "tol": 0,
+      "explain": "<p>Trapezoid area = (1/2)(b1 + b2)(h) = (1/2)(6 + 10)(4) = (1/2)(16)(4) = 32.</p>"
+    },
+    {
+      "id": "geometry-h1",
+      "diff": "hard",
+      "type": "mc",
+      "q": "<p>A circle is inscribed in a square so that the circle touches all four sides. The square has side length 8. What is the area of the region inside the square but outside the circle? Express in terms of π.</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": ["8 − 4π", "16 − 4π", "64 − 16π", "64 − 8π", "64 − 64π"],
+      "answer": 2,
+      "tol": 0,
+      "explain": "<p>The inscribed circle has diameter equal to the side, 8, so radius = 4. Square area = 8<sup>2</sup> = 64. Circle area = π(4)<sup>2</sup> = 16π. Shaded region = 64 − 16π.</p>"
+    },
+    {
+      "id": "geometry-h2",
+      "diff": "hard",
+      "type": "qc",
+      "q": "<p>Cube P has edge length s. Cube Q has edge length 2s (each dimension of P is doubled). Both quantities are compared for the same value of s &gt; 0.</p><p>Quantity A: the volume of cube Q. Quantity B: 8 times the volume of cube P.</p>",
+      "info": "",
+      "qa": "Volume of cube Q (edge 2s)",
+      "qb": "8 times the volume of cube P (edge s)",
+      "choices": [],
+      "answer": 2,
+      "tol": 0,
+      "explain": "<p>Volume of P = s<sup>3</sup>. Volume of Q = (2s)<sup>3</sup> = 8s<sup>3</sup>. Eight times P = 8s<sup>3</sup>. The two quantities are equal — doubling each linear dimension multiplies volume by the cube of the scale factor (2³ = 8).</p>"
+    },
+    {
+      "id": "geometry-h3",
+      "diff": "hard",
+      "type": "mc",
+      "q": "<p>A rectangular box has dimensions 3 by 4 by 12. What is the length of the longest straight segment (space diagonal) that fits inside the box?</p>",
+      "info": "",
+      "qa": "",
+      "qb": "",
+      "choices": ["12", "13", "√157", "5√7", "19"],
+      "answer": 1,
+      "tol": 0,
+      "explain": "<p>Space diagonal = √(l<sup>2</sup> + w<sup>2</sup> + h<sup>2</sup>) = √(3<sup>2</sup> + 4<sup>2</sup> + 12<sup>2</sup>) = √(9 + 16 + 144) = √169 = 13.</p>"
+    }
+  ]
+}

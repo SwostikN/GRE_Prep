@@ -1,0 +1,172 @@
+{
+ "slug": "arithmetic",
+ "title": "Arithmetic Foundations",
+ "order": 1,
+ "icon": "🔢",
+ "blurb": "Master integers, PEMDAS, factors, primes, divisibility, remainders and the special rules of 0 and 1.",
+ "theory": "<h3>The Integers and the Number Line</h3><p><strong>Integers</strong> are the whole numbers and their negatives: ..., -3, -2, -1, 0, 1, 2, 3, ... On the number line, value increases to the right. So -2 &lt; -1, but be careful: a larger absolute value can mean a smaller number. For example -10 &lt; -3 even though 10 &gt; 3.</p><p>Consecutive integers differ by 1 (like 5, 6, 7). Consecutive <em>even</em> or <em>odd</em> integers differ by 2 (like 4, 6, 8).</p><h3>Order of Operations (PEMDAS)</h3><p>Evaluate in this order: <strong>P</strong>arentheses, <strong>E</strong>xponents, <strong>M</strong>ultiplication and <strong>D</strong>ivision (left to right), <strong>A</strong>ddition and <strong>S</strong>ubtraction (left to right). Multiplication and division share a rank; do them left to right. Same for addition and subtraction.</p><p>Example: 8 + 12 ÷ 4 × 2 - 3<sup>2</sup> = 8 + 3 × 2 - 9 = 8 + 6 - 9 = 5.</p><h3>Positive and Negative Rules</h3><table><tr><th>Operation</th><th>Result</th></tr><tr><td>(+) × (+) or (-) × (-)</td><td>positive</td></tr><tr><td>(+) × (-) or (-) × (+)</td><td>negative</td></tr></table><p>The same sign rules hold for division. Counting signs: a product of several nonzero numbers is positive if there is an <strong>even</strong> number of negatives, and negative if there is an <strong>odd</strong> number of negatives. Subtracting a negative adds: 5 - (-3) = 5 + 3 = 8.</p><h3>Even and Odd Rules</h3><p>An <strong>even</strong> integer is divisible by 2; an <strong>odd</strong> integer is not. Zero is even.</p><table><tr><th>Rule</th><th>Result</th></tr><tr><td>even ± even</td><td>even</td></tr><tr><td>odd ± odd</td><td>even</td></tr><tr><td>even ± odd</td><td>odd</td></tr><tr><td>even × anything</td><td>even</td></tr><tr><td>odd × odd</td><td>odd</td></tr></table><p>Sum of two integers is odd only when exactly one of them is odd. A product is odd only when every factor is odd.</p><h3>Factors, Multiples, GCF and LCM</h3><p>A <strong>factor</strong> (divisor) of n divides n with no remainder. A <strong>multiple</strong> of n is n times an integer. So 6 is a factor of 24, and 24 is a multiple of 6.</p><p>The <strong>GCF</strong> (greatest common factor) is the largest integer dividing two numbers. The <strong>LCM</strong> (least common multiple) is the smallest positive multiple they share. A useful identity: for positive integers a and b, GCF(a, b) × LCM(a, b) = a × b.</p><p>To find them, use prime factorization. For 48 = 2<sup>4</sup>×3 and 72 = 2<sup>3</sup>×3<sup>2</sup>: GCF takes the lowest power of each shared prime (2<sup>3</sup>×3 = 24), LCM takes the highest power of every prime appearing (2<sup>4</sup>×3<sup>2</sup> = 144).</p><h3>Prime Numbers and Prime Factorization</h3><p>A <strong>prime</strong> has exactly two distinct positive factors: 1 and itself. The first primes are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Note that <strong>2 is the only even prime</strong>, and <strong>1 is not prime</strong>.</p><p>Every integer greater than 1 factors uniquely into primes. For example 360 = 2<sup>3</sup> × 3<sup>2</sup> × 5. Once you have the prime factorization n = p<sup>a</sup> × q<sup>b</sup> × ..., the total number of positive factors is (a+1)(b+1)... For 360 that is (3+1)(2+1)(1+1) = 24 factors.</p><h3>Divisibility Rules</h3><table><tr><th>Divisor</th><th>Rule</th></tr><tr><td>2</td><td>last digit is even</td></tr><tr><td>3</td><td>digit sum divisible by 3</td></tr><tr><td>4</td><td>last two digits form a number divisible by 4</td></tr><tr><td>5</td><td>last digit is 0 or 5</td></tr><tr><td>6</td><td>divisible by both 2 and 3</td></tr><tr><td>8</td><td>last three digits divisible by 8</td></tr><tr><td>9</td><td>digit sum divisible by 9</td></tr><tr><td>10</td><td>last digit is 0</td></tr><tr><td>11</td><td>alternating digit sum is divisible by 11 (including 0)</td></tr></table><h3>Absolute Value</h3><p>The <strong>absolute value</strong> |x| is the distance of x from 0, so it is never negative. |7| = 7 and |-7| = 7. Key facts: |x| ≥ 0 always, |x| = |-x|, and |a × b| = |a| × |b|. The equation |x| = 5 has two solutions, x = 5 or x = -5.</p><h3>Remainders and Quotients</h3><p>Dividing integer n by positive integer d gives a <strong>quotient</strong> q and a <strong>remainder</strong> r with n = d×q + r, where 0 ≤ r &lt; d. For 17 ÷ 5: quotient 3, remainder 2, since 17 = 5×3 + 2. The remainder is always smaller than the divisor. When a problem says \"the remainder when divided by 7,\" valid remainders are 0 through 6.</p><h3>Properties of 0 and 1</h3><ul><li>0 is even, is neither positive nor negative, and is an integer.</li><li>Adding 0 changes nothing: n + 0 = n.</li><li>Multiplying by 0 gives 0: n × 0 = 0.</li><li>Division by 0 is <strong>undefined</strong> — never allowed.</li><li>0 divided by any nonzero number is 0.</li><li>Multiplying by 1 changes nothing: n × 1 = n.</li><li>1 is neither prime nor composite; it has exactly one factor.</li><li>Any nonzero number to the power 0 equals 1.</li></ul>",
+ "whatEtsTests": "<ul><li>Applying even/odd and positive/negative sign rules to determine the nature of an expression without computing it</li><li>Prime factorization to count factors, find GCF/LCM, or test divisibility</li><li>Remainder problems, especially patterns when expressions are divided by a fixed number</li><li>Order of operations on expressions mixing exponents, division, and subtraction</li><li>The edge-case behavior of 0 and 1 (0 is even, 1 is not prime, division by 0 undefined)</li><li>Absolute value yielding two cases, often hidden in quantitative comparison setups</li><li>Recognizing when a relationship cannot be determined because a variable could be negative, zero, or a fraction</li></ul>",
+ "tips": [
+  "To count factors, prime-factorize and add 1 to each exponent, then multiply: 2^3 × 3^2 has (3+1)(2+1) = 12 factors.",
+  "Use GCF(a,b) × LCM(a,b) = a × b to find one quickly when you know the other.",
+  "For divisibility by 6, just check 2 and 3 together; for 12, check 3 and 4; never multiply the rules blindly.",
+  "On sign problems, count the negatives: an even count is positive, an odd count is negative — you rarely need the actual value.",
+  "For 'remainder' questions, plug in the smallest number that fits (e.g., remainder 4 on division by 7 means try n = 4) to spot the pattern fast.",
+  "Find units digits with the power cycle: 7 cycles 7,9,3,1 every 4 powers, so 7^45 ends in 7 since 45 leaves remainder 1."
+ ],
+ "traps": [
+  "Forgetting that 0 is even and that 0 is neither positive nor negative.",
+  "Treating 1 as prime, or forgetting that 2 is the only even prime.",
+  "Doing addition before multiplication, or working subtraction before an earlier division (PEMDAS goes left to right within the same rank).",
+  "Assuming a variable is a positive integer when it could be 0, negative, or a fraction — this is the classic 'cannot be determined' trap.",
+  "Confusing the divisor and the remainder, or allowing a remainder equal to or larger than the divisor."
+ ],
+ "examples": [
+  {
+   "q": "<p>Evaluate: 24 ÷ 6 × 2 + (5 - 8)<sup>2</sup>.</p>",
+   "steps": "<ol><li>Parentheses first: 5 - 8 = -3, so the term is (-3)<sup>2</sup>.</li><li>Exponent: (-3)<sup>2</sup> = 9.</li><li>Now 24 ÷ 6 × 2 + 9. Division and multiplication left to right: 24 ÷ 6 = 4, then 4 × 2 = 8.</li><li>Add: 8 + 9 = 17.</li></ol>",
+   "shortcut": "<p>Scan for the trap: many students compute 6 × 2 = 12 first and get 2 + 9 = 11. Remembering left-to-right division/multiplication gives 17 directly.</p>"
+  },
+  {
+   "q": "<p>Find the greatest common factor (GCF) and least common multiple (LCM) of 48 and 72.</p>",
+   "steps": "<ol><li>Prime-factorize: 48 = 2<sup>4</sup> × 3 and 72 = 2<sup>3</sup> × 3<sup>2</sup>.</li><li>GCF uses the lowest power of each shared prime: 2<sup>3</sup> × 3<sup>1</sup> = 8 × 3 = 24.</li><li>LCM uses the highest power of every prime present: 2<sup>4</sup> × 3<sup>2</sup> = 16 × 9 = 144.</li></ol>",
+   "shortcut": "<p>Check with the identity GCF × LCM = product: 24 × 144 = 3456 and 48 × 72 = 3456. Match confirms the answer.</p>"
+  },
+  {
+   "q": "<p>When a positive integer n is divided by 7, the remainder is 4. What is the remainder when 2n + 5 is divided by 7?</p>",
+   "steps": "<ol><li>Write n = 7k + 4 for some integer k.</li><li>Then 2n + 5 = 2(7k + 4) + 5 = 14k + 8 + 5 = 14k + 13.</li><li>14k is a multiple of 7, so the remainder comes from 13. Since 13 = 7 + 6, the remainder is 6.</li></ol>",
+   "shortcut": "<p>Plug in the smallest valid n = 4: 2(4) + 5 = 13, and 13 ÷ 7 leaves remainder 6. One arithmetic step.</p>"
+  },
+  {
+   "q": "<p>How many positive integers are factors of 360?</p>",
+   "steps": "<ol><li>Prime-factorize: 360 = 2<sup>3</sup> × 3<sup>2</sup> × 5<sup>1</sup>.</li><li>The number of positive factors equals the product of (each exponent + 1).</li><li>(3 + 1)(2 + 1)(1 + 1) = 4 × 3 × 2 = 24.</li></ol>",
+   "shortcut": "<p>No need to list factors. Just add 1 to every exponent and multiply: 4 × 3 × 2 = 24.</p>"
+  }
+ ],
+ "questions": [
+  {
+   "id": "arithmetic-e1",
+   "diff": "easy",
+   "type": "mc",
+   "q": "<p>Evaluate: 7 + 6 × (4 - 2)<sup>2</sup>.</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["31", "52", "100", "104", "26"],
+   "answer": 0,
+   "explain": "<p>Parentheses: 4 - 2 = 2. Exponent: 2<sup>2</sup> = 4. Multiply before add: 6 × 4 = 24. Then 7 + 24 = 31. Choice 52 comes from doing (7+6)×4 first. The correct answer is 31.</p>"
+  },
+  {
+   "id": "arithmetic-e2",
+   "diff": "easy",
+   "type": "mc",
+   "q": "<p>What is the value of -5 - (-8) + (-3)?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["0", "-16", "10", "-6", "6"],
+   "answer": 0,
+   "explain": "<p>Subtracting a negative adds: -5 - (-8) = -5 + 8 = 3. Then 3 + (-3) = 0. Choice -16 treats every sign as negative; choice -6 mishandles the double negative. The answer is 0.</p>"
+  },
+  {
+   "id": "arithmetic-e3",
+   "diff": "easy",
+   "type": "mc",
+   "q": "<p>Which of the following statements is true?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["0 is an even integer.", "1 is a prime number.", "0 is a positive number.", "Every prime number is odd.", "Division by 0 equals 0."],
+   "answer": 0,
+   "explain": "<p>0 is divisible by 2, so it is even. 1 is not prime (it has only one factor). 0 is neither positive nor negative. 2 is an even prime, so not every prime is odd. Division by 0 is undefined, not 0. Only the first statement is true.</p>"
+  },
+  {
+   "id": "arithmetic-e4",
+   "diff": "easy",
+   "type": "mc",
+   "q": "<p>What is the remainder when 47 is divided by 6?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["5", "7", "2", "1", "6"],
+   "answer": 0,
+   "explain": "<p>6 × 7 = 42, and 47 - 42 = 5. So 47 = 6×7 + 5, giving quotient 7 and remainder 5. A remainder must be less than the divisor, so 6 and 7 are impossible. The remainder is 5.</p>"
+  },
+  {
+   "id": "arithmetic-m1",
+   "diff": "medium",
+   "type": "ne",
+   "q": "<p>What is the least common multiple (LCM) of 12, 15, and 18?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": [],
+   "answer": 180,
+   "explain": "<p>Prime-factorize: 12 = 2<sup>2</sup>×3, 15 = 3×5, 18 = 2×3<sup>2</sup>. The LCM takes the highest power of each prime: 2<sup>2</sup> × 3<sup>2</sup> × 5 = 4 × 9 × 5 = 180. Check: 180 ÷ 12 = 15, 180 ÷ 15 = 12, 180 ÷ 18 = 10, all integers.</p>"
+  },
+  {
+   "id": "arithmetic-m2",
+   "diff": "medium",
+   "type": "mc",
+   "q": "<p>If n is an odd integer, which of the following must be even?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["n<sup>2</sup> + n", "n<sup>2</sup>", "2n + 1", "n + 2", "3n"],
+   "answer": 0,
+   "explain": "<p>n<sup>2</sup> + n = n(n + 1) is a product of two consecutive integers, one of which is always even, so it must be even. With n odd: n<sup>2</sup> is odd, 2n + 1 is odd, n + 2 is odd, and 3n is odd. Only n<sup>2</sup> + n is guaranteed even.</p>"
+  },
+  {
+   "id": "arithmetic-m3",
+   "diff": "medium",
+   "type": "qc",
+   "q": "",
+   "info": "<p>x is an integer such that -5 &lt; x &lt; 3.</p>",
+   "qa": "|x|",
+   "qb": "5",
+   "choices": [],
+   "answer": 1,
+   "explain": "<p>Since x is an integer strictly between -5 and 3, the possible values are -4, -3, -2, -1, 0, 1, 2. The largest |x| occurs at x = -4, giving |x| = 4. So |x| ranges from 0 to 4, always less than 5. Quantity B is greater. The trap is assuming x could reach -5 (it cannot — the inequality is strict).</p>"
+  },
+  {
+   "id": "arithmetic-m4",
+   "diff": "medium",
+   "type": "mc",
+   "q": "<p>Which of the following integers is divisible by both 9 and 11?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["583", "1078", "1089", "1100", "1170"],
+   "answer": 2,
+   "explain": "<p>A number divisible by both 9 and 11 must be divisible by 9 × 11 = 99. Test 1089: its digit sum 1+0+8+9 = 18 is divisible by 9, and 1089 = 11 × 99, so it is also divisible by 11 (indeed 1089 = 33<sup>2</sup>). The others pass only one test: 583 = 11×53 and 1078 = 11×98 are divisible by 11 but not 9; 1170 is divisible by 9 (digit sum 9) but not 11; 1100 is divisible by 11 but not 9. The answer is 1089.</p>"
+  },
+  {
+   "id": "arithmetic-m5",
+   "diff": "medium",
+   "type": "mc",
+   "q": "<p>When the positive integer n is divided by 5, the remainder is 3. What is the remainder when 3n is divided by 5?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["4", "3", "9", "0", "2"],
+   "answer": 0,
+   "explain": "<p>Write n = 5k + 3, so 3n = 15k + 9 = 15k + 5 + 4 = 5(3k+1) + 4. The remainder is 4. Quick check: smallest n = 3, then 3n = 9, and 9 ÷ 5 leaves remainder 4. A remainder can't be 9 (it must be less than 5), eliminating that distractor. The answer is 4.</p>"
+  },
+  {
+   "id": "arithmetic-h1",
+   "diff": "hard",
+   "type": "qc",
+   "q": "",
+   "info": "<p>n is a positive integer, and when n is divided by 6 the remainder is 4.</p>",
+   "qa": "The remainder when n<sup>2</sup> is divided by 6",
+   "qb": "4",
+   "choices": [],
+   "answer": 2,
+   "explain": "<p>Write n = 6k + 4. Then n<sup>2</sup> = 36k<sup>2</sup> + 48k + 16 = 6(6k<sup>2</sup> + 8k + 2) + 4, so the remainder when n<sup>2</sup> is divided by 6 is 4. Quick check: n = 4 → 16 leaves 4; n = 10 → 100 = 96 + 4 leaves 4; n = 16 → 256 = 252 + 4 leaves 4. The remainder is always 4, so the two quantities are equal.</p>"
+  },
+  {
+   "id": "arithmetic-h2",
+   "diff": "hard",
+   "type": "mc",
+   "q": "<p>What is the largest prime factor of 2<sup>10</sup> - 1?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["31", "11", "33", "93", "341"],
+   "answer": 0,
+   "explain": "<p>2<sup>10</sup> - 1 = 1024 - 1 = 1023. Factor: 1023 = 3 × 341 = 3 × 11 × 31. So the largest prime factor is 31. Distractor 341 = 11 × 31 is not prime; 33 = 3 × 11 is not prime; 93 = 3 × 31 is not prime. The answer is 31.</p>"
+  },
+  {
+   "id": "arithmetic-h3",
+   "diff": "hard",
+   "type": "ms",
+   "q": "<p>If a and b are integers with a × b &lt; 0 and a + b &gt; 0, which of the following must be true? Select all that apply.</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["Exactly one of a and b is negative.", "The number with the larger absolute value is positive.", "a and b are both positive.", "a - b could equal 0.", "At least one of a and b is positive."],
+   "answer": [0, 1, 4],
+   "explain": "<p>a × b &lt; 0 means the product is negative, so the two integers have opposite signs — exactly one is negative (statement 1 true), and at least one is positive (statement 5 true). Since a + b &gt; 0, the positive value outweighs the negative one, so the number with the larger absolute value is positive (statement 2 true). They cannot both be positive (statement 3 false). If a - b = 0 then a = b, forcing a×b = a<sup>2</sup> ≥ 0, contradicting a×b &lt; 0 (statement 4 false). The correct selections are 1, 2, and 5.</p>"
+  }
+ ]
+}

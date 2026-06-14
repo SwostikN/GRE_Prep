@@ -1,0 +1,184 @@
+{
+ "slug": "statistics",
+ "title": "Statistics & Data",
+ "order": 11,
+ "icon": "📊",
+ "blurb": "Master mean, median, mode, range, weighted averages, spread, percentiles, the normal curve, and data reading.",
+ "theory": "<h3>The Big Idea</h3><p>Statistics on the GRE is about summarizing a list of numbers with a few key measures: where the data <strong>centers</strong> (mean, median, mode), how <strong>spread out</strong> it is (range, standard deviation, IQR), and where individual values <strong>rank</strong> (percentiles, quartiles). Most questions reward solid arithmetic and a clear understanding of definitions far more than heavy calculation.</p><h3>Mean (Average)</h3><p>The <strong>mean</strong> is the sum of all values divided by how many there are.</p><p>mean = (sum of values) ÷ (number of values)</p><p>The single most useful rearrangement on the GRE is:</p><p><strong>total = average × count</strong></p><p>Whenever a problem gives you an average, immediately convert it to a total. Averages do not add, but totals do. If the average of 5 numbers is 30, their total is 30 × 5 = 150.</p><h3>Median</h3><p>The <strong>median</strong> is the middle value once the data is sorted in order. You MUST sort first.</p><ul><li>If the count is <strong>odd</strong>, the median is the single middle value. For n values, it is at position (n + 1) ÷ 2.</li><li>If the count is <strong>even</strong>, the median is the average of the two middle values.</li></ul><p>For the sorted set 3, 8, 8, 12, 15, 20 (six values), the two middle values are 8 and 12, so the median is (8 + 12) ÷ 2 = 10.</p><p>The median is <em>resistant</em> to extreme values (outliers); the mean is not. A single huge value can pull the mean way up while barely moving the median.</p><h3>Mode</h3><p>The <strong>mode</strong> is the value that appears most often. A set can have no mode, one mode, or several. In 5, 7, 7, 9, 9, 9, 12 the mode is 9 (it appears three times).</p><h3>Range</h3><p>The <strong>range</strong> = largest value − smallest value. It is the crudest measure of spread and depends entirely on the two extremes.</p><h3>Weighted Average</h3><p>When groups have different sizes (or weights), you cannot simply average the averages. Multiply each value by its weight, add those products, then divide by the total weight.</p><p>weighted average = (sum of value × weight) ÷ (sum of weights)</p><table><tr><th>Group</th><th>Average</th><th>Count (weight)</th><th>Total</th></tr><tr><td>Class A</td><td>78</td><td>25</td><td>1950</td></tr><tr><td>Class B</td><td>90</td><td>15</td><td>1350</td></tr></table><p>Combined average = (1950 + 1350) ÷ (25 + 15) = 3300 ÷ 40 = 82.5. Notice it is closer to 78 than to 90 because Class A has more students. A weighted average always lands closer to the value with the larger weight.</p><h3>Effect of Adding or Removing a Value</h3><p>Use totals. If a new value is <strong>greater</strong> than the current mean, the mean rises; if <strong>less</strong>, it falls; if <strong>equal</strong>, it stays the same. The median may shift in less obvious ways because it depends on position, not size.</p><h3>Standard Deviation (Spread)</h3><p>The <strong>standard deviation (SD)</strong> measures how far, on average, the values sit from the mean. A small SD means values cluster tightly near the mean; a large SD means they are widely scattered. You will almost never compute SD by hand on the GRE. Instead, you compare spreads conceptually.</p><ul><li>Sets {75, 76, 77, 78, 79} and {60, 70, 80, 90, 100} have very different spreads — the second has a much larger SD.</li><li>Adding the same constant to every value shifts the mean but leaves the SD <strong>unchanged</strong>.</li><li>Multiplying every value by a positive constant k multiplies the SD by k.</li><li>Adding a value equal to the mean reduces the SD slightly; adding an extreme value increases it.</li></ul><h3>Quartiles & Interquartile Range</h3><p>Sorting the data and splitting it into four equal parts gives the quartiles. <strong>Q1</strong> (first quartile) is the median of the lower half, <strong>Q2</strong> is the overall median, and <strong>Q3</strong> (third quartile) is the median of the upper half. The <strong>interquartile range (IQR)</strong> = Q3 − Q1 captures the spread of the middle 50% of the data and ignores extreme values.</p><h3>Percentiles</h3><p>A value at the <strong>p-th percentile</strong> is greater than or equal to p% of the data. Scoring in the 80th percentile means you scored at least as high as 80% of test-takers (20% scored higher). Percentiles describe rank, not a raw score.</p><h3>The Normal Distribution & the 68-95-99.7 Rule</h3><p>Many data sets follow a bell-shaped <strong>normal distribution</strong>, symmetric about the mean. For such distributions:</p><ul><li>About <strong>68%</strong> of values fall within 1 SD of the mean.</li><li>About <strong>95%</strong> fall within 2 SD of the mean.</li><li>About <strong>99.7%</strong> fall within 3 SD of the mean.</li></ul><p>Because the curve is symmetric, half of each band lies on each side. So about 34% lie between the mean and +1 SD. The percentage <em>above</em> the mean + 1 SD is (100 − 68) ÷ 2 = 16%.</p><h3>Reading Tables, Bar, and Line Graphs</h3><p>Data Interpretation sets present a chart or table followed by several questions. Read the title, axis labels, and units first. Common pitfalls: confusing percent change with absolute change, misreading the scale, and overlooking units (thousands vs millions). Always ground each answer in the exact numbers shown.</p>",
+ "whatEtsTests": "<ul><li><strong>total = average × count</strong> as the workhorse for nearly every average problem, especially adding, removing, or replacing values.</li><li>Median vs. mean, and recognizing that the median resists outliers while the mean does not.</li><li>Weighted averages disguised as ordinary averages (different group sizes).</li><li>Standard deviation tested <em>conceptually</em> as spread in Quantitative Comparison — comparing two sets without computing.</li><li>The 68-95-99.7 rule for the normal distribution, often asking for the percent above or below a given number of SDs.</li><li>Percentiles and quartiles/IQR definitions, plus careful reading of tables, bar graphs, and line graphs in multi-question Data Interpretation sets.</li></ul>",
+ "tips": [
+  "Convert every average into a total immediately (total = average × count). Totals add and subtract cleanly; averages do not.",
+  "Always sort the list before finding the median, and count the values to decide odd (single middle) vs even (average of two middles).",
+  "For a weighted average, the answer is always pulled toward the value with the larger weight — use this to eliminate impossible choices.",
+  "To compare standard deviations by eye, look at how tightly the values cluster around the mean; ignore the actual mean values.",
+  "Adding the same number to every value leaves the spread/SD unchanged; adding a value equal to the mean shrinks it.",
+  "For normal-distribution questions, sketch the bell curve and split 68/95/99.7 in half on each side to read off percentages fast."
+ ],
+ "traps": [
+  "Forgetting to sort before taking the median, or miscounting odd vs even and grabbing the wrong middle value.",
+  "Averaging the averages when group sizes differ — this ignores the weights and gives a wrong simple average.",
+  "Assuming a larger range means a larger standard deviation; SD depends on all values, not just the two extremes.",
+  "Confusing percentile (rank) with percentage score, e.g. treating an 80th-percentile finish as an 80% score.",
+  "On the normal curve, forgetting the distribution is symmetric and using a full band (e.g. 68%) when only one tail or half is asked."
+ ],
+ "examples": [
+  {
+   "q": "<p>The average (arithmetic mean) of 6 numbers is 82. A 7th number is added so that the average of all 7 numbers becomes 84. What is the value of the 7th number?</p>",
+   "steps": "<ol><li>Convert each average to a total. Original total = 82 × 6 = 492.</li><li>New total = 84 × 7 = 588.</li><li>The 7th number is the difference: 588 − 492 = <strong>96</strong>.</li></ol>",
+   "shortcut": "<p>Adding a value that raises the average of 7 numbers by 2 means the new value carries its own 84 plus 2 extra for each of the other 6: 84 + 6 × 2 = 96.</p>"
+  },
+  {
+   "q": "<p>A student scored 80 on each of 3 tests and 92 on each of 2 tests. What is the student's average score across all 5 tests?</p>",
+   "steps": "<ol><li>This is a weighted average. Find the total points: (80 × 3) + (92 × 2) = 240 + 184 = 424.</li><li>Divide by the total number of tests: 424 ÷ 5 = <strong>84.8</strong>.</li></ol>",
+   "shortcut": "<p>The two values are 12 apart. The mean sits 2/5 of the way from 80 toward 92: 80 + (2/5)(12) = 84.8.</p>"
+  },
+  {
+   "q": "<p>Set X = {60, 70, 80, 90, 100} and Set Y = {75, 76, 77, 78, 79}. Without computing, which set has the greater standard deviation, and why?</p>",
+   "steps": "<ol><li>Standard deviation measures how far values lie from their mean.</li><li>Set X stretches from 60 to 100 — values sit far from the center.</li><li>Set Y is packed within 4 units — values sit very close to the center.</li><li>Therefore <strong>Set X has the greater standard deviation</strong> because its values are much more spread out.</li></ol>",
+   "shortcut": "<p>Compare the clustering visually: Y is a tight cluster, X is widely scattered. Tighter cluster = smaller SD.</p>"
+  },
+  {
+   "q": "<p>Scores on a test are normally distributed with mean 500 and standard deviation 100. Approximately what percent of scores are above 600?</p>",
+   "steps": "<ol><li>600 is exactly 1 standard deviation above the mean (500 + 100).</li><li>By the 68-95-99.7 rule, about 68% of scores fall within 1 SD of the mean (between 400 and 600).</li><li>The remaining 100 − 68 = 32% lies in the two tails, split equally by symmetry.</li><li>So the percent above 600 is 32 ÷ 2 = <strong>16%</strong>.</li></ol>",
+   "shortcut": "<p>Above mean + 1 SD is always about 16% for a normal distribution; memorize this single number.</p>"
+  }
+ ],
+ "questions": [
+  {
+   "id": "statistics-e1",
+   "diff": "easy",
+   "type": "mc",
+   "q": "<p>What is the average (arithmetic mean) of 4, 7, 11, 18, and 20?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["11", "12", "13", "14", "15"],
+   "answer": 1,
+   "tol": 0,
+   "explain": "<p>Sum = 4 + 7 + 11 + 18 + 20 = 60. Divide by 5: 60 ÷ 5 = 12.</p>"
+  },
+  {
+   "id": "statistics-e2",
+   "diff": "easy",
+   "type": "mc",
+   "q": "<p>What is the median of the data set 3, 8, 8, 12, 15, 20?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["8", "9", "10", "11", "12"],
+   "answer": 2,
+   "tol": 0,
+   "explain": "<p>The set is already sorted and has 6 (even) values, so the median is the average of the two middle values, 8 and 12: (8 + 12) ÷ 2 = 10.</p>"
+  },
+  {
+   "id": "statistics-e3",
+   "diff": "easy",
+   "type": "mc",
+   "q": "<p>What is the range of the data set 14, 9, 22, 7, 30?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["7", "16", "21", "23", "30"],
+   "answer": 3,
+   "tol": 0,
+   "explain": "<p>Range = largest − smallest = 30 − 7 = 23.</p>"
+  },
+  {
+   "id": "statistics-e4",
+   "diff": "easy",
+   "type": "ne",
+   "q": "<p>The average (arithmetic mean) of 5 numbers is 30. Four of the numbers are 25, 28, 32, and 35. What is the value of the fifth number?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": [],
+   "answer": 30,
+   "tol": 0,
+   "explain": "<p>Total of all five = 30 × 5 = 150. The four known numbers sum to 25 + 28 + 32 + 35 = 120. The fifth number = 150 − 120 = 30.</p>"
+  },
+  {
+   "id": "statistics-m1",
+   "diff": "medium",
+   "type": "mc",
+   "q": "<p>A class of 25 students has an average score of 78, and a class of 15 students has an average score of 90. What is the average score of all 40 students combined?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["82.5", "83.5", "84", "85", "86"],
+   "answer": 0,
+   "tol": 0,
+   "explain": "<p>Use totals: (25 × 78) + (15 × 90) = 1950 + 1350 = 3300. Combined average = 3300 ÷ 40 = 82.5. It is closer to 78 because the 25-student class carries more weight.</p>"
+  },
+  {
+   "id": "statistics-m2",
+   "diff": "medium",
+   "type": "mc",
+   "q": "<p>Scores on an exam are normally distributed with mean 70 and standard deviation 5. Approximately what percent of scores fall between 60 and 80?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["68%", "75%", "95%", "97.5%", "99.7%"],
+   "answer": 2,
+   "tol": 0,
+   "explain": "<p>60 is 2 SD below the mean (70 − 2 × 5) and 80 is 2 SD above (70 + 2 × 5). By the 68-95-99.7 rule, about 95% of values fall within 2 standard deviations of the mean.</p>"
+  },
+  {
+   "id": "statistics-m3",
+   "diff": "medium",
+   "type": "ne",
+   "q": "<p>A set of 6 numbers has an average (arithmetic mean) of 15. When one number is removed, the average of the remaining 5 numbers is 16. What is the value of the number that was removed?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": [],
+   "answer": 10,
+   "tol": 0,
+   "explain": "<p>Original total = 15 × 6 = 90. Remaining total = 16 × 5 = 80. Removed value = 90 − 80 = 10. (Removing a below-average value raises the mean, which is consistent.)</p>"
+  },
+  {
+   "id": "statistics-m4",
+   "diff": "medium",
+   "type": "qc",
+   "q": "<p>Set P = {10, 20, 30, 40, 50} and Set Q = {28, 29, 30, 31, 32}. Both sets have a mean of 30.</p>",
+   "info": "Set P = {10, 20, 30, 40, 50} and Set Q = {28, 29, 30, 31, 32}. Both sets have a mean of 30.",
+   "qa": "The standard deviation of Set P",
+   "qb": "The standard deviation of Set Q",
+   "choices": [],
+   "answer": 0,
+   "tol": 0,
+   "explain": "<p>Both sets share the same mean of 30, so compare spread. Set P's values stretch from 10 to 50 (far from the mean), while Set Q's values cluster within 2 units of the mean. The more widely spread set, P, has the greater standard deviation. Quantity A is greater.</p>"
+  },
+  {
+   "id": "statistics-m5",
+   "diff": "medium",
+   "type": "ms",
+   "q": "<p>The data set 1, 3, 5, 7, 9 has a mean of 5 and a median of 5. The value 100 is added to the set. Which of the following statements are true about the new 6-value set? Select all that apply.</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["The mean increases", "The median increases", "The mean is greater than the median", "The range stays the same", "The mode is now 100"],
+   "answer": [0, 1, 2],
+   "tol": 0,
+   "explain": "<p>New set sorted: 1, 3, 5, 7, 9, 100. New mean = 125 ÷ 6 ≈ 20.8, so the mean increases (true). New median = (5 + 7) ÷ 2 = 6, up from 5, so the median increases (true). Mean ≈ 20.8 is greater than median 6 (true). Range was 8 and is now 99, so it does not stay the same (false). All values appear once, so there is no mode of 100 (false).</p>"
+  },
+  {
+   "id": "statistics-h1",
+   "diff": "hard",
+   "type": "qc",
+   "q": "<p>A list of 9 distinct numbers has a mean of 50. The largest number, 80, is removed from the list.</p>",
+   "info": "A list of 9 distinct numbers has a mean of 50. The largest number, 80, is removed from the list.",
+   "qa": "The mean of the remaining 8 numbers",
+   "qb": "50",
+   "choices": [],
+   "answer": 1,
+   "tol": 0,
+   "explain": "<p>Original total = 50 × 9 = 450. After removing 80, remaining total = 450 − 80 = 370, and the new mean = 370 ÷ 8 = 46.25. Removing a value above the mean (80 > 50) always lowers the mean, so the remaining mean is less than 50. Quantity B is greater.</p>"
+  },
+  {
+   "id": "statistics-h2",
+   "diff": "hard",
+   "type": "mc",
+   "q": "<p>The lengths (in cm) of 9 rods, in order, are 3, 5, 7, 8, 12, 13, 14, 18, 21. What is the interquartile range (IQR) of this data set?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["6", "9", "10", "12", "18"],
+   "answer": 2,
+   "tol": 0,
+   "explain": "<p>The overall median is the 5th value, 12, which splits the data into a lower half (3, 5, 7, 8) and an upper half (13, 14, 18, 21). Q1 = median of the lower half = (5 + 7) ÷ 2 = 6. Q3 = median of the upper half = (14 + 18) ÷ 2 = 16. IQR = Q3 − Q1 = 16 − 6 = 10.</p>"
+  },
+  {
+   "id": "statistics-h3",
+   "diff": "hard",
+   "type": "mc",
+   "q": "<p>The weights of newborns at a hospital are normally distributed with a mean of 3.4 kg and a standard deviation of 0.4 kg. A newborn is considered low birth weight if it weighs less than 2.6 kg. Approximately what percent of newborns are low birth weight?</p>",
+   "info": "", "qa": "", "qb": "",
+   "choices": ["0.15%", "2.5%", "5%", "16%", "32%"],
+   "answer": 1,
+   "tol": 0,
+   "explain": "<p>2.6 kg is 2 standard deviations below the mean (3.4 − 2 × 0.4 = 2.6). By the 68-95-99.7 rule, about 95% of values fall within 2 SD, leaving 5% in the two tails. By symmetry, half of that lies below mean − 2 SD: 5 ÷ 2 = 2.5%.</p>"
+  }
+ ]
+}
