@@ -15,8 +15,8 @@ python3 -m http.server      # then visit http://localhost:8000
 ## Features
 
 - **12 modules**, foundations → advanced: Arithmetic, Fractions/Decimals/Ratios, Percentages, Exponents & Roots, Algebra, Linear & Quadratic Equations, Inequalities & Absolute Value, Word Problems, Geometry, Coordinate Geometry, Statistics, and Probability & Counting.
-- Each module has **theory + "what ETS tests most" + GRE shortcuts + common traps**, **4 worked examples**, and **12 practice questions** with full solutions.
-- **184 questions** in real GRE formats — multiple-choice, **quantitative comparison**, **numeric entry**, and **multiple-answer** — each with a worked explanation.
+- Each module has **theory + "what ETS tests most" + GRE shortcuts + common traps**, **4 worked examples**, **12 practice questions**, and a **separate 12-question timed self-test** drawn from a *different* fresh bank (so the self-test never repeats the practice problems, and each attempt is randomized).
+- **328 questions** (144 practice + 144 self-test + 40 master) in real GRE formats — multiple-choice, **quantitative comparison**, **numeric entry**, and **multiple-answer** — each with a worked explanation. Submitting a quiz shows a correct / incorrect / skipped breakdown and reveals every solution.
 - **Adaptive gating** — a module unlocks only after you hit the mastery bar (≥70% easy, ≥60% medium) on the previous one.
 - **40-question timed Master Test** with an estimated 130–170 scaled score and band interpretation.
 - **Spaced repetition** (Leitner system), **weak-topic dashboard**, **mistake redo**, and a per-module **error log**.
@@ -34,8 +34,10 @@ formulas.html     Searchable formula sheet
 css/styles.css    Light-theme stylesheet
 js/data.js        Generated question bank (window.MODULES, window.MASTER_TEST)
 js/app.js         Engine: progress, gating, spaced repetition, scoring, rendering
-js/src/*.json     Source content (one file per module + the master test)
-js/src/build.py   Validates all JSON and regenerates js/data.js
+js/src/<m>.json          Module content (theory, examples, practice questions)
+js/src/<m>.selftest.json Fresh self-test bank for that module (separate questions)
+js/src/mastertest.json   The 40-question master test
+js/src/build.py          Validates all JSON (incl. self-test vs practice dedup) and regenerates js/data.js
 ```
 
 ## Editing content

@@ -25,6 +25,7 @@
   MODULES.forEach(function (m) {
     bySlug[m.slug] = m;
     (m.questions || []).forEach(function (q) { q.m = m.slug; allQ[q.id] = q; });
+    (m.selftest || []).forEach(function (q) { q.m = m.slug; q.st = true; allQ[q.id] = q; });
   });
   MASTER.forEach(function (q) { allQ[q.id] = q; });
 
@@ -50,9 +51,10 @@
   // ---------- stats / gating ----------
   function moduleStats(slug) {
     var m = bySlug[slug]; if (!m) return null;
+    var pool = (m.questions || []).concat(m.selftest || []);
     var r = { easy: { c: 0, t: 0 }, medium: { c: 0, t: 0 }, hard: { c: 0, t: 0 },
-      attempted: 0, total: (m.questions || []).length, correct: 0 };
-    (m.questions || []).forEach(function (q) {
+      attempted: 0, total: pool.length, correct: 0 };
+    pool.forEach(function (q) {
       var a = state.attempts[q.id];
       if (a && a.seen > 0) {
         r.attempted++;
@@ -235,9 +237,13 @@
     node.querySelectorAll("input").forEach(function (i) { i.disabled = true; });
     if (q.type === "ne") {
       if (reveal) {
-        var wrap = $(".ne-input", node).parentNode;
-        if (!$(".ne-ans", wrap)) wrap.appendChild(el("span", { class: "ne-ans small muted", text: "   Correct answer: " + q.answer }));
-        $(".ne-input", node).classList.add(correct ? "" : "");
+        var inp = $(".ne-input", node);
+        if (inp) {
+          inp.classList.add(correct ? "ne-correct" : "ne-wrong");
+          var wrap = inp.parentNode;
+          if (!$(".ne-ans", wrap)) wrap.appendChild(el("span", { class: "ne-ans " + (correct ? "ok" : "no"),
+            html: (correct ? "✓" : "✗ Correct answer: <strong>" + q.answer + "</strong>") }));
+        }
       }
     } else {
       var ans = q.type === "ms" ? q.answer : [q.answer];
@@ -285,11 +291,19 @@
     function finish() {
       if (finished) return; finished = true;
       if (timer) clearInterval(timer);
-      var correct = 0;
-      nodes.forEach(function (o) { var ok = gradeQuestion(o.n, o.q, true); record(o.q.id, ok); if (ok) correct++; });
-      submitBtn.disabled = true;
+      var correct = 0, answered = 0;
+      nodes.forEach(function (o) {
+        var hasResp = getResponse(o.n, o.q) != null;
+        if (hasResp) answered++;
+        var ok = false;
+        try { ok = gradeQuestion(o.n, o.q, true); } catch (e) { ok = false; }
+        record(o.q.id, ok);
+        if (ok) correct++;
+      });
+      submitBtn.disabled = true; submitBtn.textContent = "Submitted ✓";
       if (timerEl) timerEl.textContent = " ⏱ done";
-      var res = { correct: correct, total: questions.length };
+      var res = { correct: correct, total: questions.length, answered: answered,
+        incorrect: answered - correct, skipped: questions.length - answered };
       if (opts.scaled) { state.testHistory.push({ date: now(), correct: correct, total: res.total }); save(); }
       renderResult(result, res, opts);
       result.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -313,7 +327,7 @@
   function renderResult(container, res, opts) {
     var pct = res.total ? res.correct / res.total : 0;
     container.innerHTML = "";
-    var panel = el("div", { class: "panel center" });
+    var panel = el("div", { class: "panel center result-panel" });
     if (opts.scaled) {
       var scaled = Math.round(130 + pct * 40);
       var band = scaled >= 166 ? ["target", "165+ — Target achieved! 🎯"]
@@ -323,12 +337,19 @@
       panel.appendChild(el("div", { class: "score-big", text: "~" + scaled }));
       panel.appendChild(el("div", { class: "small muted", text: "Estimated GRE Quant score (130–170 scale)" }));
       panel.appendChild(el("div", {}, [el("span", { class: "band " + band[0], text: band[1] })]));
-      panel.appendChild(el("p", { class: "lead", text: res.correct + " of " + res.total + " correct (" + Math.round(pct * 100) + "%)." }));
     } else {
-      panel.appendChild(el("div", { class: "score-big", text: Math.round(pct * 100) + "%" }));
-      panel.appendChild(el("p", { class: "lead", text: res.correct + " of " + res.total + " correct." }));
+      var passed = pct >= 0.70;
+      panel.appendChild(el("div", { class: "score-big", text: res.correct + " / " + res.total }));
+      panel.appendChild(el("div", {}, [el("span", { class: "band " + (passed ? "target" : "inter"),
+        text: (passed ? "Passed ✓  " : "Keep practicing  ") + Math.round(pct * 100) + "%" })]));
     }
-    panel.appendChild(el("p", { class: "small muted", text: "Scroll up to review every question — correct answers are highlighted in green and full solutions are revealed. Missed questions are added to your Review queue." }));
+    var bd = el("div", { class: "result-breakdown" });
+    bd.appendChild(el("span", { class: "rb ok", html: "✓ " + res.correct + " correct" }));
+    bd.appendChild(el("span", { class: "rb no", html: "✗ " + (res.incorrect != null ? res.incorrect : res.total - res.correct) + " incorrect" }));
+    if (res.skipped) bd.appendChild(el("span", { class: "rb sk", html: "– " + res.skipped + " skipped" }));
+    bd.appendChild(el("span", { class: "rb pc", html: Math.round(pct * 100) + "% score" }));
+    panel.appendChild(bd);
+    panel.appendChild(el("p", { class: "small muted", text: "Scroll up to review every question — correct answers are highlighted in green, your wrong picks in red, and full solutions are revealed. Missed questions are added to your Review queue." }));
     container.appendChild(panel);
   }
 
@@ -471,19 +492,24 @@
       });
     }
 
-    // self-test
+    // self-test — drawn from a SEPARATE bank of fresh questions (never the practice set above)
     var st = $("#selftest-box");
     if (st) {
       st.innerHTML = "";
+      var stPool = (m.selftest && m.selftest.length) ? m.selftest : (m.questions || []);
+      var hasBank = !!(m.selftest && m.selftest.length);
       var qz = el("div", {});
-      var n = Math.min(10, (m.questions || []).length);
-      var startBtn = el("button", { class: "btn", type: "button", text: "▶ Start timed self-test (" + n + " questions, " + Math.round(n * 1.5) + " min)" });
+      var n = Math.min(10, stPool.length);
+      var startBtn = el("button", { class: "btn", type: "button" });
+      var setLabel = function (first) {
+        startBtn.textContent = (first ? "▶ Start" : "↻ Retake") + " timed self-test (" + n + " questions, " + Math.round(n * 1.5) + " min)";
+      };
+      setLabel(true);
       startBtn.addEventListener("click", function () {
-        startBtn.disabled = true;
-        runQuiz(qz, sample(m.questions, n), { title: m.title + " — Self-Test", timed: true, seconds: n * 90,
-          onFinish: function () { renderGate(m); renderModuleNav(m); } });
+        runQuiz(qz, sample(stPool, n), { title: m.title + " — Self-Test", timed: true, seconds: n * 90,
+          onFinish: function () { renderGate(m); renderModuleNav(m); setLabel(false); } });
       });
-      st.appendChild(el("p", { class: "muted", text: "A timed mix of this module's questions. Your results feed your progress, weak-topic dashboard, and spaced-repetition deck." }));
+      st.appendChild(el("p", { class: "muted", html: "A timed quiz drawn from a <strong>separate bank of fresh questions</strong> — different from the practice problems above. Each attempt is randomized, so retakes give you new questions. Your results feed your progress, weak-topic dashboard, and spaced-repetition deck." + (hasBank ? "" : " <em>(Self-test bank not loaded; using practice questions as a fallback.)</em>") }));
       st.appendChild(startBtn);
       st.appendChild(qz);
     }

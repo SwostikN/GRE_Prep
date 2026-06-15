@@ -189,6 +189,17 @@ details.ex[open]>summary::before,details.sol[open]>summary::before{content:"▾"
 .band.inter{background:var(--warn-soft);color:var(--warn)}
 .band.strong{background:#dbeafe;color:#1d4ed8}
 .band.target{background:var(--good-soft);color:var(--good)}
+.result-panel .score-big{margin-bottom:6px}
+.result-breakdown{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0 6px}
+.rb{font-weight:800;font-size:.95rem;padding:7px 15px;border-radius:999px;border:1.5px solid var(--line)}
+.rb.ok{background:var(--good-soft);color:var(--good);border-color:var(--good)}
+.rb.no{background:var(--bad-soft);color:var(--bad);border-color:var(--bad)}
+.rb.sk{background:#f1f5f9;color:var(--ink-soft)}
+.rb.pc{background:var(--brand-soft);color:var(--brand-dark);border-color:var(--brand)}
+.ne-input.ne-correct{border-color:var(--good);background:var(--good-soft)}
+.ne-input.ne-wrong{border-color:var(--bad);background:var(--bad-soft)}
+.ne-ans{margin-left:10px;font-weight:700}
+.ne-ans.ok{color:var(--good)} .ne-ans.no{color:var(--bad)}
 
 /* gate */
 .gate{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:18px 0;background:#fff;box-shadow:var(--shadow)}
